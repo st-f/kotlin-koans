@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="i_introduction._8_Smart_Casts.N08SmartCastsKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.0">
+  <properties/>
+  <testcase name="testNum" classname="i_introduction._8_Smart_Casts.N08SmartCastsKtTest" time="0.0"/>
+  <testcase name="testSum" classname="i_introduction._8_Smart_Casts.N08SmartCastsKtTest" time="0.0"/>
+  <testcase name="testRecursion" classname="i_introduction._8_Smart_Casts.N08SmartCastsKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

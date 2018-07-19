@@ -1,6 +1,9 @@
 out
 .idea
 .gradle
-build
+build/kotlin
+build/classes
+build/kotlin-build
+build/tmp
 local.properties
 *.iml

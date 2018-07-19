@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="i_introduction._7_Nullable_Types.N07NullableTypesKtTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.001">
+  <properties/>
+  <testcase name="everythingIsOk" classname="i_introduction._7_Nullable_Types.N07NullableTypesKtTest" time="0.0"/>
+  <testcase name="noClient" classname="i_introduction._7_Nullable_Types.N07NullableTypesKtTest" time="0.0"/>
+  <testcase name="noMessage" classname="i_introduction._7_Nullable_Types.N07NullableTypesKtTest" time="0.0"/>
+  <testcase name="noPersonalInfo" classname="i_introduction._7_Nullable_Types.N07NullableTypesKtTest" time="0.0"/>
+  <testcase name="noEmail" classname="i_introduction._7_Nullable_Types.N07NullableTypesKtTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

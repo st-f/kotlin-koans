@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="i_introduction._10_Object_Expressions.N10ObjectExpressionsKtTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.001">
+  <properties/>
+  <testcase name="testSort" classname="i_introduction._10_Object_Expressions.N10ObjectExpressionsKtTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

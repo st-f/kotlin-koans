@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ii_collections.N15AllAnyAndOtherPredicatesKtTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.001">
+  <properties/>
+  <testcase name="testAnyCustomerIsFromCity" classname="ii_collections.N15AllAnyAndOtherPredicatesKtTest" time="0.0"/>
+  <testcase name="testFirstCustomerFromCity" classname="ii_collections.N15AllAnyAndOtherPredicatesKtTest" time="0.0"/>
+  <testcase name="testCountCustomersFromCity" classname="ii_collections.N15AllAnyAndOtherPredicatesKtTest" time="0.0"/>
+  <testcase name="testAllCustomersAreFromCity" classname="ii_collections.N15AllAnyAndOtherPredicatesKtTest" time="0.0"/>
+  <testcase name="testCustomerIsFromCity" classname="ii_collections.N15AllAnyAndOtherPredicatesKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
