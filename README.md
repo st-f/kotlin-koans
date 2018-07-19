@@ -1,6 +1,6 @@
 ![bitrise](https://app.bitrise.io/app/af77d2a2cc2cb387.svg?token=4M8mDYQFuls64Az9os3ieQ) 
 
-This is a fork of Kotlin Koans with all my answers. See test results http://htmlpreview.github.com/?https://raw.githubusercontent.com/st-f/kotlin-koans/master/build/reports/tests/test/index.html
+This is a fork of Kotlin Koans with all my answers. [See test results](http://htmlpreview.github.com/?https://raw.githubusercontent.com/st-f/kotlin-koans/master/build/reports/tests/test/index.html)
 <br><br><br>
 [![official JetBrains project](http://jb.gg/badges/official-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
