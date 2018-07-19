@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n24ExtensionsOnCollections.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">ii_collections</a> &gt; <span class="el_source">n24ExtensionsOnCollections.kt</span></div><h1>n24ExtensionsOnCollections.kt</h1><pre class="source lang-java linenums">package ii_collections
+
+import util.TODO
+
+<span class="nc" id="L5">fun todoTask24(): Nothing = TODO(</span>
+<span class="nc" id="L6">        &quot;&quot;&quot;</span>
+        Task 24.
+        The function should do the same as '_24_JavaCode.doSomethingStrangeWithCollection'.
+        Replace all invocations of 'todoTask24()' with the appropriate code.
+    &quot;&quot;&quot;,
+<span class="nc" id="L11">        references = { c: Collection&lt;String&gt; -&gt; _24_JavaCode().doSomethingStrangeWithCollection(c) }</span>
+)
+
+fun doSomethingStrangeWithCollection(collection: Collection&lt;String&gt;): Collection&lt;String&gt;? {
+<span class="fc" id="L15">    val groupsByLength = collection.groupBy { it.length }</span>
+<span class="fc" id="L16">    return groupsByLength.values.maxBy { it.size }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

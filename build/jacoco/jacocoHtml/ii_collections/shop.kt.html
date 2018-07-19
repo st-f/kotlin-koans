@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>shop.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">ii_collections</a> &gt; <span class="el_source">shop.kt</span></div><h1>shop.kt</h1><pre class="source lang-java linenums">package ii_collections
+
+<span class="pc" id="L3">data class Shop(val name: String, val customers: List&lt;Customer&gt;)</span>
+
+<span class="fc" id="L5">data class Customer(val name: String, val city: City, val orders: List&lt;Order&gt;) {</span>
+<span class="nc" id="L6">    override fun toString() = &quot;$name from ${city.name}&quot;</span>
+}
+
+<span class="fc" id="L9">data class Order(val products: List&lt;Product&gt;, val isDelivered: Boolean)</span>
+
+<span class="pc" id="L11">data class Product(val name: String, val price: Double) {</span>
+<span class="nc" id="L12">    override fun toString() = &quot;'$name' for $price&quot;</span>
+}
+
+<span class="fc" id="L15">data class City(val name: String) {</span>
+<span class="nc" id="L16">    override fun toString() = name</span>
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

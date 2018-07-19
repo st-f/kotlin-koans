@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n05StringTemplates.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._5_String_Templates</a> &gt; <span class="el_source">n05StringTemplates.kt</span></div><h1>n05StringTemplates.kt</h1><pre class="source lang-java linenums">package i_introduction._5_String_Templates
+
+import util.TODO
+import util.doc5
+
+fun example1(a: Any, b: Any) =
+<span class="nc" id="L7">        &quot;This is some text in which variables ($a, $b) appear.&quot;</span>
+
+fun example2(a: Any, b: Any) =
+<span class="nc" id="L10">        &quot;You can write it in a Java way as well. Like this: &quot; + a + &quot;, &quot; + b + &quot;!&quot;</span>
+
+<span class="nc bnc" id="L12" title="All 2 branches missed.">fun example3(c: Boolean, x: Int, y: Int) = &quot;Any expression can be used: ${if (c) x else y}&quot;</span>
+
+fun example4() =
+<span class="nc" id="L15">        &quot;&quot;&quot;</span>
+You can use raw strings to write multiline text.
+There is no escaping here, so raw strings are useful for writing regex patterns,
+you don't need to escape a backslash by a backslash.
+String template entries (${42}) are allowed here.
+<span class="nc" id="L20">&quot;&quot;&quot;</span>
+
+<span class="nc" id="L22">fun getPattern() = &quot;&quot;&quot;\d{2}\.\d{2}\.\d{4}&quot;&quot;&quot;</span>
+
+<span class="nc" id="L24">fun example() = &quot;13.06.1992&quot;.matches(getPattern().toRegex()) //true</span>
+
+<span class="pc" id="L26">val month = &quot;(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)&quot;</span>
+
+<span class="nc" id="L28">fun todoTask5(): Nothing = TODO(</span>
+<span class="nc" id="L29">    &quot;&quot;&quot;</span>
+        Task 5.
+        Copy the body of 'getPattern()' to the 'task5()' function below
+        and rewrite it in such a way that it matches format: '13 JUN 1992'.
+        Use the 'month' variable.
+    &quot;&quot;&quot;,
+<span class="nc" id="L35">    documentation = doc5(),</span>
+<span class="nc" id="L36">    references = { getPattern(); month })</span>
+
+<span class="fc" id="L38">fun task5(): String = &quot;&quot;&quot;\d{2} ${month} \d{4}&quot;&quot;&quot;</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

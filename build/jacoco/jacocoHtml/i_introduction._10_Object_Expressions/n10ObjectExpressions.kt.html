@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n10ObjectExpressions.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._10_Object_Expressions</a> &gt; <span class="el_source">n10ObjectExpressions.kt</span></div><h1>n10ObjectExpressions.kt</h1><pre class="source lang-java linenums">package i_introduction._10_Object_Expressions
+
+import util.TODO
+import util.doc10
+import java.util.*
+
+<span class="nc" id="L7">fun todoTask10(): Nothing = TODO(</span>
+<span class="nc" id="L8">        &quot;&quot;&quot;</span>
+        Task 10.
+        Read about object expressions that play the same role in Kotlin as anonymous classes in Java.
+
+        Add an object expression that provides a comparator to sort a list in a descending order using 'java.util.Collections' class.
+        In Kotlin you use Kotlin library extensions instead of java.util.Collections,
+        but this example is still a good demonstration of mixing Kotlin and Java code.
+    &quot;&quot;&quot;,
+<span class="nc" id="L16">        documentation = doc10()</span>
+)
+
+fun task10(): List&lt;Int&gt; {
+<span class="fc" id="L20">    val arrayList = arrayListOf(1, 5, 2)</span>
+<span class="fc" id="L21">    Collections.sort(arrayList, Comp)</span>
+<span class="fc" id="L22">    return arrayList</span>
+}
+
+<span class="fc" id="L25">object Comp : Comparator&lt;Int&gt; {</span>
+    override fun compare(p0: Int, p1: Int): Int {
+<span class="fc" id="L27">        return p1 - p0</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n09ExtensionFunctions.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._9_Extension_Functions</a> &gt; <span class="el_source">n09ExtensionFunctions.kt</span></div><h1>n09ExtensionFunctions.kt</h1><pre class="source lang-java linenums">package i_introduction._9_Extension_Functions
+
+import util.TODO
+import util.doc9
+
+// declares an extension function that returns the last character
+<span class="nc" id="L7">fun String.lastChar() = this.get(this.length - 1)</span>
+
+
+// 'this' refers to the receiver (String) and can be omitted
+<span class="nc" id="L11">fun String.lastChar1() = get(length - 1)</span>
+
+fun useExtensionFunction() {
+    // try Ctrl+Space &quot;default completion&quot; after the dot: lastChar() is visible
+<span class="nc" id="L15">    &quot;abc&quot;.lastChar()</span>
+<span class="nc" id="L16">}</span>
+
+// 'lastChar' is compiled to a static function in the class ExtensionFunctionsKt (see JavaCode9.useExtension)
+
+<span class="nc" id="L20">fun todoTask9(): Nothing = TODO(</span>
+<span class="nc" id="L21">    &quot;&quot;&quot;</span>
+        Task 9.
+        Implement the extension functions Int.r(), Pair&lt;Int, Int&gt;.r()
+        to support the following manner of creating rational numbers:
+        1.r(), Pair(1, 2).r()
+    &quot;&quot;&quot;,
+<span class="nc" id="L27">    documentation = doc9(),</span>
+<span class="nc" id="L28">    references = { 1.r(); Pair(1, 2).r(); RationalNumber(1, 9) })</span>
+
+<span class="pc" id="L30">data class RationalNumber(val numerator: Int, val denominator: Int)</span>
+
+<span class="fc" id="L32">fun Int.r(): RationalNumber = RationalNumber(this, 1)</span>
+<span class="fc" id="L33">fun Pair&lt;Int, Int&gt;.r(): RationalNumber = RationalNumber(this.first, this.second)</span>
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

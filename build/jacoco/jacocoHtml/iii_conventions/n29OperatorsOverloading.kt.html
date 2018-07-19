@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n29OperatorsOverloading.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">iii_conventions</a> &gt; <span class="el_source">n29OperatorsOverloading.kt</span></div><h1>n29OperatorsOverloading.kt</h1><pre class="source lang-java linenums">package iii_conventions
+
+import util.TODO
+import iii_conventions.TimeInterval.*
+
+<span class="nc" id="L6">fun todoTask29(): Nothing = TODO(</span>
+<span class="nc" id="L7">    &quot;&quot;&quot;</span>
+        Task 29.
+        Implement a kind of date arithmetic. Support adding years, weeks and days to a date.
+        Use classes 'MyDate' and 'TimeInterval'.
+        Use the provided utility function 'MyDate.addTimeIntervals'.
+        Uncomment the commented line and make it compile.
+
+        (1). Add an extension function 'plus()' to MyDate, taking a TimeInterval as an argument.
+        (2). Support adding several time intervals to a date. Add an extra class.
+        If you have any problems, see the iii_conventions/_29_Tips.kt file.
+    &quot;&quot;&quot;,
+<span class="nc" id="L18">    references = { date: MyDate, timeInterval: TimeInterval -&gt;</span>
+<span class="nc" id="L19">        date.addTimeIntervals(timeInterval, 1)</span>
+    })
+
+fun task29_1(today: MyDate): MyDate {
+<span class="fc" id="L23">    return today + YEAR + WEEK</span>
+}
+
+fun task29_2(today: MyDate): MyDate {
+<span class="fc" id="L27">    return today + YEAR * 2 + WEEK * 3 + DAY * 5</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

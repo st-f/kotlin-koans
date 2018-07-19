@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n07NullableTypes.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._7_Nullable_Types</a> &gt; <span class="el_source">n07NullableTypes.kt</span></div><h1>n07NullableTypes.kt</h1><pre class="source lang-java linenums">package i_introduction._7_Nullable_Types
+
+import util.TODO
+import util.doc7
+
+fun test() {
+<span class="nc" id="L7">    val s: String = &quot;this variable cannot store null references&quot;</span>
+<span class="nc" id="L8">    val q: String? = null</span>
+
+    if (q != null) q.length      // you have to check to dereference
+<span class="nc" id="L11">    val i: Int? = q?.length      // null</span>
+<span class="nc" id="L12">    val j: Int = q?.length ?: 0  // 0</span>
+<span class="nc" id="L13">}</span>
+
+<span class="nc" id="L15">fun todoTask7(client: Client?, message: String?, mailer: Mailer): Nothing = TODO(</span>
+<span class="nc" id="L16">        &quot;&quot;&quot;</span>
+        Task 7.
+        Rewrite JavaCode7.sendMessageToClient in Kotlin, using only one 'if' expression.
+        Declarations of Client, PersonalInfo and Mailer are given below.
+    &quot;&quot;&quot;,
+<span class="nc" id="L21">        documentation = doc7(),</span>
+<span class="nc" id="L22">        references = { JavaCode7().sendMessageToClient(client, message, mailer) }</span>
+)
+
+fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
+    /*if (client == null || message == null) return
+    val personalInfo = client.personalInfo ?: return
+    val email = personalInfo.email ?: return*/
+<span class="fc bfc" id="L29" title="All 8 branches covered.">    if (client?.personalInfo?.email == null || message == null) return</span>
+<span class="fc" id="L30">    mailer.sendMessage(client.personalInfo.email, message)</span>
+<span class="fc" id="L31">}</span>
+
+<span class="fc" id="L33">class Client(val personalInfo: PersonalInfo?)</span>
+<span class="fc" id="L34">class PersonalInfo(val email: String?)</span>
+
+interface Mailer {
+    fun sendMessage(email: String, message: String)
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

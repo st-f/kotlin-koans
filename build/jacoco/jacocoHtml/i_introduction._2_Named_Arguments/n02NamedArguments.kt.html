@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n02NamedArguments.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._2_Named_Arguments</a> &gt; <span class="el_source">n02NamedArguments.kt</span></div><h1>n02NamedArguments.kt</h1><pre class="source lang-java linenums">package i_introduction._2_Named_Arguments
+
+import i_introduction._1_Java_To_Kotlin_Converter.task1
+import util.TODO
+import util.doc2
+
+// default values for arguments
+<span class="nc" id="L8">fun bar(i: Int, s: String = &quot;&quot;, b: Boolean = true) {}</span>
+
+fun usage() {
+    // named arguments
+<span class="nc" id="L12">    bar(1, b = false)</span>
+<span class="nc" id="L13">}</span>
+
+<span class="nc" id="L15">fun todoTask2(): Nothing = TODO(</span>
+<span class="nc" id="L16">    &quot;&quot;&quot;</span>
+        Task 2.
+        Print out the collection contents surrounded by curly braces using the library function 'joinToString'.
+        Specify only 'prefix' and 'postfix' arguments.
+
+        Don't forget to remove the 'todoTask2()' invocation which throws an exception.
+    &quot;&quot;&quot;,
+<span class="nc" id="L23">    documentation = doc2(),</span>
+<span class="nc" id="L24">    references = { collection: Collection&lt;Int&gt; -&gt; task1(collection); collection.joinToString() })</span>
+
+fun task2(collection: Collection&lt;Int&gt;): String {
+<span class="fc" id="L27">    val joinToString = collection.joinToString(prefix = &quot;{&quot;, postfix = &quot;}&quot;)</span>
+<span class="fc" id="L28">    return joinToString</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

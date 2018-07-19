@@ -1,7 +1,8 @@
 package v_builders
 
 import util.TODO
-import java.util.*
+import v_builders.examples.buildMap
+import javax.swing.UIManager.put
 
 fun buildStringExample(): String {
     fun buildString(build: StringBuilder.() -> Unit): String {
@@ -20,7 +21,7 @@ fun buildStringExample(): String {
 }
 
 fun todoTask37(): Nothing = TODO(
-    """
+        """
         Task 37.
         Uncomment the commented code and make it compile.
         Add and implement function 'buildMap' with one parameter (of type extension function) creating a new HashMap,
@@ -37,3 +38,7 @@ fun task37(): Map<Int, String> {
 //        }
 //    }
 }
+
+/*fun buildMap(function: () -> Unit): Map<Int, String> {
+    var map: Map<Int, String> = 
+}*/

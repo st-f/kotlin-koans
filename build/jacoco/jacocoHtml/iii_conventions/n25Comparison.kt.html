@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n25Comparison.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">iii_conventions</a> &gt; <span class="el_source">n25Comparison.kt</span></div><h1>n25Comparison.kt</h1><pre class="source lang-java linenums">package iii_conventions
+
+import util.TODO
+import util.doc25
+
+<span class="nc" id="L6">fun todoTask25(): Nothing = TODO(</span>
+<span class="nc" id="L7">    &quot;&quot;&quot;</span>
+        Task 25.
+        Uncomment the commented line and make it compile. 
+        Make all the changes to the file MyDate.kt.
+
+        Tips: Make the class 'MyDate' implement 'Comparable'.
+    &quot;&quot;&quot;,
+<span class="nc" id="L14">    documentation = doc25(),</span>
+<span class="nc" id="L15">    references = { date: MyDate, comparable: Comparable&lt;MyDate&gt; -&gt; }</span>
+)
+
+fun task25(date1: MyDate, date2: MyDate): Boolean {
+<span class="pc bpc" id="L19" title="1 of 2 branches missed.">    return date1 &lt; date2</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

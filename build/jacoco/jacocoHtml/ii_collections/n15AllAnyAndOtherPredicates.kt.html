@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n15AllAnyAndOtherPredicates.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">ii_collections</a> &gt; <span class="el_source">n15AllAnyAndOtherPredicates.kt</span></div><h1>n15AllAnyAndOtherPredicates.kt</h1><pre class="source lang-java linenums">package ii_collections
+
+fun example2(list: List&lt;Int&gt;) {
+<span class="nc bnc" id="L4" title="All 2 branches missed.">    val isZero: (Int) -&gt; Boolean = { it == 0 }</span>
+<span class="nc" id="L5">    val hasZero: Boolean = list.any(isZero)</span>
+<span class="nc" id="L6">    val allZeros: Boolean = list.all(isZero)</span>
+<span class="nc" id="L7">    val numberOfZeros: Int = list.count(isZero)</span>
+<span class="nc bnc" id="L8" title="All 4 branches missed.">    val firstPositiveNumber: Int? = list.firstOrNull { it &gt; 0 }</span>
+<span class="nc" id="L9">}</span>
+
+fun Customer.isFrom(city: City): Boolean {
+    // Return true if the customer is from the given city
+<span class="fc" id="L13">    return this.city.name == city.name</span>
+}
+
+fun Shop.checkAllCustomersAreFrom(city: City): Boolean {
+    // Return true if all customers are from the given city
+<span class="fc bfc" id="L18" title="All 2 branches covered.">    return this.customers.all { it.isFrom(city) }</span>
+}
+
+fun Shop.hasCustomerFrom(city: City): Boolean {
+    // Return true if there is at least one customer from the given city
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">    return this.customers.any { it.isFrom(city) }</span>
+}
+
+fun Shop.countCustomersFrom(city: City): Int {
+    // Return the number of customers from the given city
+<span class="fc bfc" id="L28" title="All 2 branches covered.">    return this.customers.count { it.isFrom(city) }</span>
+}
+
+fun Shop.findFirstCustomerFrom(city: City): Customer? {
+    // Return the first customer who lives in the given city, or null if there is none
+<span class="fc bfc" id="L33" title="All 2 branches covered.">    return this.customers.firstOrNull() { it.isFrom(city) }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

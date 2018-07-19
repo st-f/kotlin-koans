@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MyDate.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">iii_conventions</a> &gt; <span class="el_source">MyDate.kt</span></div><h1>MyDate.kt</h1><pre class="source lang-java linenums">package iii_conventions
+
+<span class="fc" id="L3">data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparable&lt;MyDate&gt; {</span>
+    override fun compareTo(other: MyDate): Int {
+<span class="fc" id="L5">        val i = when {</span>
+<span class="fc bfc" id="L6" title="All 2 branches covered.">            year != other.year -&gt; year - other.year</span>
+<span class="fc bfc" id="L7" title="All 2 branches covered.">            month != other.month -&gt; month - other.month</span>
+<span class="fc" id="L8">            else -&gt; dayOfMonth - other.dayOfMonth</span>
+        }
+<span class="fc" id="L10">        return i</span>
+    }
+
+    operator fun plus(timeInterval: TimeInterval): MyDate {
+<span class="fc" id="L14">        return this.addTimeIntervals(timeInterval, 1)</span>
+    }
+
+    operator fun plus(timeInterval: RepeatedTimeInterval): MyDate {
+<span class="fc" id="L18">        return this.addTimeIntervals(timeInterval.ti, timeInterval.n)</span>
+    }
+}
+
+operator fun MyDate.rangeTo(other: MyDate): DateRange {
+<span class="fc" id="L23">    return DateRange(this, other)</span>
+}
+
+<span class="fc" id="L26">enum class TimeInterval {</span>
+    DAY,
+    WEEK,
+    YEAR;
+
+    operator fun times(i :Int):RepeatedTimeInterval {
+<span class="fc" id="L32">        return RepeatedTimeInterval(this, i)</span>
+    }
+}
+
+<span class="fc" id="L36">class RepeatedTimeInterval(val ti: TimeInterval, val n: Int)</span>
+
+<span class="pc" id="L38">class DateRange(val start: MyDate, val endInclusive: MyDate) : Iterable&lt;MyDate&gt; {</span>
+    override fun iterator(): Iterator&lt;MyDate&gt; {
+<span class="fc" id="L40">        return DateRangeIterator(start, endInclusive)</span>
+    }
+
+    operator fun contains(date: MyDate): Boolean {
+<span class="fc bfc" id="L44" title="All 4 branches covered.">        return date &gt;= start &amp;&amp; date &lt;= endInclusive</span>
+    }
+}
+
+<span class="pc" id="L48">class DateRangeIterator(var start: MyDate, private val endInclusive: MyDate) : Iterator&lt;MyDate&gt; {</span>
+    override fun hasNext(): Boolean {
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        return start &lt;= endInclusive</span>
+    }
+
+    override fun next(): MyDate {
+<span class="fc" id="L54">        val current = start</span>
+<span class="fc" id="L55">        start = start.nextDay()</span>
+<span class="fc" id="L56">        return current</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

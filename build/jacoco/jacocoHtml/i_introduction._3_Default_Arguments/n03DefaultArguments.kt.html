@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n03DefaultArguments.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._3_Default_Arguments</a> &gt; <span class="el_source">n03DefaultArguments.kt</span></div><h1>n03DefaultArguments.kt</h1><pre class="source lang-java linenums">package i_introduction._3_Default_Arguments
+
+import util.TODO
+import util.doc2
+
+<span class="nc" id="L6">fun todoTask3(): Nothing = TODO(</span>
+<span class="nc" id="L7">        &quot;&quot;&quot;</span>
+        Task 3.
+        Several overloaded 'foo' functions in the class 'JavaCode3' can be replaced with one function in Kotlin.
+        Change the declaration of the function 'foo' in a way that makes the code using 'foo' compile.
+        You have to add 'foo' parameters and implement its body.
+        Uncomment the commented code and make it compile.
+    &quot;&quot;&quot;,
+        
+<span class="nc" id="L15">        documentation = doc2(),</span>
+<span class="nc" id="L16">        references = { name: String -&gt; JavaCode3().foo(name); foo(&quot;fuu&quot;) })</span>
+
+fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false): String {
+<span class="fc" id="L19">    val s = (name + number)</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">    return if(toUpperCase) s.capitalize() else s</span>
+}
+
+fun task3(): String {
+<span class="fc" id="L24">    val s = foo(&quot;a&quot;) +</span>
+<span class="fc" id="L25">            foo(&quot;b&quot;, number = 1) +</span>
+<span class="fc" id="L26">            foo(&quot;c&quot;, toUpperCase = true) +</span>
+<span class="fc" id="L27">            foo(name = &quot;d&quot;, number = 2, toUpperCase = true)</span>
+<span class="fc" id="L28">    println(s)</span>
+<span class="fc" id="L29">    return s</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

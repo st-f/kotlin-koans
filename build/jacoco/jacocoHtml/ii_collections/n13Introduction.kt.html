@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n13Introduction.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">ii_collections</a> &gt; <span class="el_source">n13Introduction.kt</span></div><h1>n13Introduction.kt</h1><pre class="source lang-java linenums">package ii_collections
+
+import java.util.*
+
+/*
+ * This part of workshop was inspired by:
+ * https://github.com/goldmansachs/gs-collections-kata
+ */
+
+/*
+ *  There are many operations that help to transform one collection into another, starting with 'to'
+ */
+fun example0(list: List&lt;Int&gt;) {
+<span class="nc" id="L14">    list.toSet()</span>
+
+<span class="nc" id="L16">    list.toCollection(HashSet&lt;Int&gt;())</span>
+<span class="nc" id="L17">}</span>
+
+fun Shop.getSetOfCustomers(): Set&lt;Customer&gt; {
+    // Return a set containing all the customers of this shop
+    //todoCollectionTask()
+<span class="fc" id="L22">    return this.customers.toSet()</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

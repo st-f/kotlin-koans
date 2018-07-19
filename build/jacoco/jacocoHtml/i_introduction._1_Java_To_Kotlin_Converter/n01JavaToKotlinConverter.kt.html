@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n01JavaToKotlinConverter.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">i_introduction._1_Java_To_Kotlin_Converter</a> &gt; <span class="el_source">n01JavaToKotlinConverter.kt</span></div><h1>n01JavaToKotlinConverter.kt</h1><pre class="source lang-java linenums">package i_introduction._1_Java_To_Kotlin_Converter
+
+import util.TODO
+
+<span class="nc" id="L5">fun todoTask1(collection: Collection&lt;Int&gt;): Nothing = TODO(</span>
+<span class="nc" id="L6">    &quot;&quot;&quot;</span>
+        Task 1.
+        Convert the Java method 'task1' of the class 'JavaCode1' into Kotlin.
+        In IntelliJ IDEA or Android Studio, you can copy the Java code,
+        paste it into the Kotlin file and let IDE convert it.
+        Please use automatic conversion for this task only.
+    &quot;&quot;&quot;,
+<span class="nc" id="L13">    references = { JavaCode1().task1(collection) })</span>
+
+fun task1(collection: Collection&lt;Int&gt;): String {
+<span class="fc" id="L16">    val sb = StringBuilder()</span>
+<span class="fc" id="L17">    sb.append(&quot;{&quot;)</span>
+<span class="fc" id="L18">    val iterator = collection.iterator()</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">    while (iterator.hasNext()) {</span>
+<span class="fc" id="L20">        val element = iterator.next()</span>
+<span class="fc" id="L21">        sb.append(element)</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (iterator.hasNext()) {</span>
+<span class="fc" id="L23">            sb.append(&quot;, &quot;)</span>
+        }
+    }
+<span class="fc" id="L26">    sb.append(&quot;}&quot;)</span>
+<span class="fc" id="L27">    return sb.toString()</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

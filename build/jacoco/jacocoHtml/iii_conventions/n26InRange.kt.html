@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n26InRange.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">iii_conventions</a> &gt; <span class="el_source">n26InRange.kt</span></div><h1>n26InRange.kt</h1><pre class="source lang-java linenums">package iii_conventions
+
+import util.TODO
+import util.doc26
+
+<span class="nc" id="L6">fun todoTask26_(): Nothing = TODO(</span>
+<span class="nc" id="L7">    &quot;&quot;&quot;</span>
+        Task 26.
+        Uncomment the commented line and make it compile.
+        Make all the changes to the file MyDate.kt.
+
+        Tips: In Kotlin 'in' checks are translated to the corresponding 'contains' calls.
+        You can add a method 'fun contains(d: MyDate)' to the class 'DateRange' to allow 'in' checks with a range of dates.
+        Alternatively, you can make the class 'DateRange' implement the 'ClosedRange' interface from the standard library.
+    &quot;&quot;&quot;,
+<span class="nc" id="L16">    documentation = doc26(),</span>
+<span class="nc" id="L17">    references = { range: ClosedRange&lt;Int&gt; -&gt; }</span>
+)
+
+fun checkInRange(date: MyDate, first: MyDate, last: MyDate): Boolean {
+<span class="fc" id="L21">    return date in DateRange(first, last)</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

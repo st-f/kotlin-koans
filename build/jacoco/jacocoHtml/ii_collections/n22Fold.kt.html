@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n22Fold.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">ii_collections</a> &gt; <span class="el_source">n22Fold.kt</span></div><h1>n22Fold.kt</h1><pre class="source lang-java linenums">package ii_collections
+
+fun example9() {
+<span class="nc" id="L4">    val result = listOf(1, 2, 3, 4).fold(1, { partResult, element -&gt; element * partResult })</span>
+<span class="nc bnc" id="L5" title="All 2 branches missed.">    result == 24</span>
+<span class="nc" id="L6">}</span>
+
+// The same as
+fun whatFoldDoes(): Int {
+<span class="nc" id="L10">    var result = 1</span>
+<span class="nc" id="L11">    listOf(1, 2, 3, 4).forEach { element -&gt; result = element * result }</span>
+<span class="nc" id="L12">    return result</span>
+}
+
+fun Shop.getSetOfProductsOrderedByEachCustomer(): Set&lt;Product&gt; {
+    // Return the set of products that were ordered by each of the customers
+<span class="fc" id="L17">    return customers.fold(allOrderedProducts) { orderedByAll, customer -&gt;</span>
+<span class="fc" id="L18">        val orderedProducts = customer.orders.flatMap { it.products }.toSet()</span>
+<span class="fc" id="L19">        orderedByAll.intersect(orderedProducts)</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>n35HowDelegatesWork.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kotlin-koans</a> &gt; <a href="index.source.html" class="el_package">iv_properties</a> &gt; <span class="el_source">n35HowDelegatesWork.kt</span></div><h1>n35HowDelegatesWork.kt</h1><pre class="source lang-java linenums">package iv_properties
+
+import iii_conventions.MyDate
+import util.TODO
+import java.util.*
+import kotlin.properties.ReadWriteProperty
+import kotlin.reflect.KProperty
+
+<span class="nc" id="L9">fun todoTask35(): Nothing = TODO(</span>
+<span class="nc" id="L10">        &quot;&quot;&quot;</span>
+        Task 35.
+        A delegate expression must have special 'get' and 'set' methods.
+        You can see their signatures below as members of the 'ReadWriteProperty' interface.
+
+        Implement the members of the class 'EffectiveDate' so it can be delegated to.
+        Store only the time in milliseconds in 'timeInMillis' property.
+        Use the extension functions 'MyDate.toMillis' and 'Long.toDate'.
+    &quot;&quot;&quot;,
+<span class="nc" id="L19">        references = { date: MyDate -&gt; date.toMillis().toDate() }</span>
+)
+
+<span class="fc" id="L22">class D {</span>
+<span class="fc" id="L23">    var date by EffectiveDate()</span>
+    // The property date$delegate of type EffectiveDate is created;
+    // the generated 'get' and 'set' accessors for 'date' are delegated to it.
+    // You can look at the bytecode (by calling &quot;Show Kotlin Bytecode&quot; action in IntelliJ IDEA) for details.
+}
+
+<span class="fc" id="L29">class EffectiveDate&lt;R&gt; : ReadWriteProperty&lt;R, MyDate&gt; {</span>
+    private var timeInMillis: Long? = null
+
+    override operator fun getValue(thisRef: R, property: KProperty&lt;*&gt;): MyDate {
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        return timeInMillis!!.toDate()</span>
+    }
+
+    override operator fun setValue(thisRef: R, property: KProperty&lt;*&gt;, value: MyDate) {
+<span class="fc" id="L37">        timeInMillis = value.toMillis()</span>
+<span class="fc" id="L38">    }</span>
+}
+
+fun MyDate.toMillis(): Long {
+<span class="fc" id="L42">    val c = Calendar.getInstance()</span>
+<span class="fc" id="L43">    c.set(year, month, dayOfMonth, 0, 0, 0)</span>
+<span class="fc" id="L44">    c.set(Calendar.MILLISECOND, 0)</span>
+<span class="fc" id="L45">    return c.timeInMillis</span>
+}
+
+fun Long.toDate(): MyDate {
+<span class="fc" id="L49">    val c = Calendar.getInstance()</span>
+<span class="fc" id="L50">    c.timeInMillis = this</span>
+<span class="fc" id="L51">    return MyDate(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE))</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
