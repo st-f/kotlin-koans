@@ -22,20 +22,20 @@ import v_builders.htmlLibrary.*
 fun renderProductTable(): String {
 <span class="nc" id="L23">    return html {</span>
 <span class="nc" id="L24">        table {</span>
-<span class="fc" id="L25">            tr {</span>
-<span class="fc" id="L26">                td {</span>
-<span class="fc" id="L27">                    text(&quot;Product&quot;)</span>
-<span class="fc" id="L28">                }</span>
-<span class="fc" id="L29">                td {</span>
-<span class="fc" id="L30">                    text(&quot;Price&quot;)</span>
-<span class="fc" id="L31">                }</span>
-<span class="fc" id="L32">                td {</span>
-<span class="fc" id="L33">                    text(&quot;Popularity&quot;)</span>
-<span class="fc" id="L34">                }</span>
-<span class="fc" id="L35">            }</span>
-<span class="fc" id="L36">            val products = getProducts()</span>
-<span class="nc" id="L37">            todoTask39()</span>
-        }
+<span class="nc" id="L25">            tr(color = getTitleColor()) {</span>
+<span class="nc" id="L26">                td { text(&quot;Product&quot;) }</span>
+<span class="nc" id="L27">                td { text(&quot;Price&quot;) }</span>
+<span class="nc" id="L28">                td { text(&quot;Popularity&quot;) }</span>
+<span class="nc" id="L29">            }</span>
+<span class="nc" id="L30">            val products = getProducts()</span>
+<span class="nc" id="L31">            products.forEachIndexed { i, product -&gt;</span>
+<span class="nc" id="L32">                tr(color = getCellColor(i, i)) {</span>
+<span class="nc" id="L33">                    td { this.text(product.description) }</span>
+<span class="nc" id="L34">                    td { this.text(product.price) }</span>
+<span class="nc" id="L35">                    td { this.text(product.popularity) }</span>
+<span class="nc" id="L36">                }</span>
+<span class="nc" id="L37">            }</span>
+<span class="nc" id="L38">        }</span>
 <span class="nc" id="L39">    }.toString()</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

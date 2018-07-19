@@ -4,7 +4,7 @@ import util.TODO
 import java.util.*
 
 <span class="nc" id="L6">fun task41(): Nothing = TODO(</span>
-<span class="fc" id="L7">    &quot;&quot;&quot;</span>
+<span class="nc" id="L7">    &quot;&quot;&quot;</span>
         Task41.
         Add a 'partitionTo' function that splits a collection into two collections according to a predicate.
         Uncomment the commented invocations of 'partitionTo' below and make them compile.
@@ -13,19 +13,26 @@ import java.util.*
         You should write a function that splits the collection into two collections given as arguments.
         The signature of the 'toCollection()' function from the standard library may help you.
     &quot;&quot;&quot;,
-<span class="fc" id="L16">        references = { l: List&lt;Int&gt; -&gt;</span>
+<span class="nc" id="L16">        references = { l: List&lt;Int&gt; -&gt;</span>
 <span class="nc bnc" id="L17" title="All 4 branches missed.">            l.partition { it &gt; 0 }</span>
 <span class="nc" id="L18">            l.toCollection(HashSet&lt;Int&gt;())</span>
         }
 )
 
+fun &lt;T,H: MutableCollection&lt;T&gt;&gt; Collection&lt;T&gt;.partitionTo(listHead : H, listBody: H, predicate : (T) -&gt; Boolean ) : Pair&lt;H,H&gt; {
+<span class="nc" id="L23">    this.forEach{</span>
+<span class="nc" id="L24">        val isPredicate = predicate.invoke(it)</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        if(isPredicate) listHead.add(it)</span>
+<span class="nc" id="L26">        else listBody.add(it)</span>
+<span class="nc" id="L27">    }</span>
+<span class="nc" id="L28">    return Pair(listHead,listBody)</span>
+}
+
 fun List&lt;String&gt;.partitionWordsAndLines(): Pair&lt;List&lt;String&gt;, List&lt;String&gt;&gt; {
-<span class="nc" id="L23">    task41()</span>
-//    return partitionTo(ArrayList&lt;String&gt;(), ArrayList()) { s -&gt; !s.contains(&quot; &quot;) }
+<span class="nc bnc" id="L32" title="All 2 branches missed.">    return partitionTo(ArrayList&lt;String&gt;(), ArrayList()) { s -&gt; !s.contains(&quot; &quot;) }</span>
 }
 
 fun Set&lt;Char&gt;.partitionLettersAndOtherSymbols(): Pair&lt;Set&lt;Char&gt;, Set&lt;Char&gt;&gt; {
-<span class="nc" id="L28">    task41()</span>
-//    return partitionTo(HashSet&lt;Char&gt;(), HashSet()) { c -&gt; c in 'a'..'z' || c in 'A'..'Z'}
+<span class="nc bnc" id="L36" title="All 8 branches missed.">    return partitionTo(HashSet&lt;Char&gt;(), HashSet()) { c -&gt; c in 'a'..'z' || c in 'A'..'Z'}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

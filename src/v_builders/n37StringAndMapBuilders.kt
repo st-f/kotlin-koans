@@ -1,8 +1,7 @@
 package v_builders
 
 import util.TODO
-import v_builders.examples.buildMap
-import javax.swing.UIManager.put
+import java.util.*
 
 fun buildStringExample(): String {
     fun buildString(build: StringBuilder.() -> Unit): String {
@@ -30,15 +29,16 @@ fun todoTask37(): Nothing = TODO(
 )
 
 fun task37(): Map<Int, String> {
-    todoTask37()
-//    return buildMap {
-//        put(0, "0")
-//        for (i in 1..10) {
-//            put(i, "$i")
-//        }
-//    }
+    return buildMap {
+        put(0, "0")
+        for (i in 1..10) {
+            put(i, "$i")
+        }
+    }
 }
 
-/*fun buildMap(function: () -> Unit): Map<Int, String> {
-    var map: Map<Int, String> = 
-}*/
+fun <H, K> buildMap(build2: Hashtable<H, K>.() -> Unit): Map<H, K> {
+    val map = Hashtable<H, K>()
+    map.build2()
+    return map
+}

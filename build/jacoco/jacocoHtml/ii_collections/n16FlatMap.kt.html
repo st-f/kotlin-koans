@@ -11,12 +11,11 @@ fun example() {
 
 val Customer.orderedProducts: Set&lt;Product&gt; get() {
     // Return all products this customer has ordered
-<span class="fc" id="L14">    return orders.flatMap { it.products.toList() }.toSet()</span>
+<span class="nc" id="L14">    return orders.flatMap { it.products.toList() }.toSet()</span>
 }
 
 val Shop.allOrderedProducts: Set&lt;Product&gt; get() {
     // Return all products that were ordered by at least one customer
-<span class="fc" id="L19">    val toSet = customers.flatMap { it.orderedProducts }.toSet()</span>
-<span class="fc" id="L20">    return toSet</span>
+<span class="nc" id="L19">    return customers.flatMap { it.orderedProducts }.toSet()</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
