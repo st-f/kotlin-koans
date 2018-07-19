@@ -1,7 +1,7 @@
 ![bitrise](https://app.bitrise.io/app/af77d2a2cc2cb387.svg?token=4M8mDYQFuls64Az9os3ieQ) 
 
 This is a fork of Kotlin Koans with all my answers
-<br><br>
+<br><br><br><br>
 [![official JetBrains project](http://jb.gg/badges/official-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
 Kotlin Koans
