@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="iii_conventions.N25ComparisonKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.001">
-  <properties/>
-  <testcase name="testAfter" classname="iii_conventions.N25ComparisonKtTest" time="0.0"/>
-  <testcase name="testDateComparison" classname="iii_conventions.N25ComparisonKtTest" time="0.0"/>
-  <testcase name="testBefore" classname="iii_conventions.N25ComparisonKtTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

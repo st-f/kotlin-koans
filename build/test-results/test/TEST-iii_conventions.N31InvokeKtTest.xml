@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="iii_conventions.N31InvokeKtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.002">
-  <properties/>
-  <testcase name="testNumberOfInvocations" classname="iii_conventions.N31InvokeKtTest" time="0.001"/>
-  <testcase name="testTask17" classname="iii_conventions.N31InvokeKtTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

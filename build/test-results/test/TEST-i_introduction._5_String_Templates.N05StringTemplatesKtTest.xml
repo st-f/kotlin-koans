@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="i_introduction._5_String_Templates.N05StringTemplatesKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.002">
-  <properties/>
-  <testcase name="match1" classname="i_introduction._5_String_Templates.N05StringTemplatesKtTest" time="0.002"/>
-  <testcase name="match" classname="i_introduction._5_String_Templates.N05StringTemplatesKtTest" time="0.0"/>
-  <testcase name="doNotMatch" classname="i_introduction._5_String_Templates.N05StringTemplatesKtTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

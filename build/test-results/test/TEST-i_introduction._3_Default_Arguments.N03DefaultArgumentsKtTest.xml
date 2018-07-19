@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="i_introduction._3_Default_Arguments.N03DefaultArgumentsKtTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-19T13:04:43" hostname="stf-macbook" time="0.0">
-  <properties/>
-  <testcase name="testDefaultAndNamedParams" classname="i_introduction._3_Default_Arguments.N03DefaultArgumentsKtTest" time="0.0"/>
-  <system-out><![CDATA[a42b1C42D2
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
