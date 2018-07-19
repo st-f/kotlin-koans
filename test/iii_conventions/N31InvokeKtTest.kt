@@ -14,7 +14,6 @@ class N31InvokeKtTest {
             val invokable = Invokable()
             assertEquals(message, numberOfInvocations, invokeSeveralTimes(invokable).getNumberOfInvocations())
         }
-
         testInvokable(1) { it() }
         testInvokable(5) { it()()()()() }
         testInvokable(0) { it }

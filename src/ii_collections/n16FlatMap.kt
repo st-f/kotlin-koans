@@ -1,5 +1,7 @@
 package ii_collections
 
+import java.util.logging.Logger
+
 fun example() {
 
     val result = listOf("abc", "12").flatMap { it.toList() }
@@ -9,10 +11,11 @@ fun example() {
 
 val Customer.orderedProducts: Set<Product> get() {
     // Return all products this customer has ordered
-    todoCollectionTask()
+    return orders.flatMap { it.products.toList() }.toSet()
 }
 
 val Shop.allOrderedProducts: Set<Product> get() {
     // Return all products that were ordered by at least one customer
-    todoCollectionTask()
+    val toSet = customers.flatMap { it.orderedProducts }.toSet()
+    return toSet
 }
